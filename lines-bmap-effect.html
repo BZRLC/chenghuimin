@@ -20,7 +20,7 @@
 var dom = document.getElementById("container");
 var myChart = echarts.init(dom);
 
-$.getJSON('http://echarts.baidu.com/data/asset/data/lines-bus.json', function(data) {
+$.getJSON('./json/lines-bus.json', function(data) {
     var hStep = 300 / (data.length - 1);
     var busLines = [].concat.apply([], data.map(function (busLine, idx) {
         var prevPt;
